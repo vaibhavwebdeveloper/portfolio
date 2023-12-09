@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Ephesis&family=Montserrat:wght@200&family=Open+Sans:wght@300&family=Poppins:wght@200&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Dancing Script", cursive;
+  font-family: "Ephesis", cursive;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --lighttextcolor: #fff;
+  --darkbackground: #292929;
+}
+
+nav h1 {
+  font-size: 40px;
+  padding-left: 40px;
+}
+nav h1 .bx-menu {
+  display: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0%;
+  padding: 20px 0 20px 0;
+  background-color: #292929;
+  color: var(--lighttextcolor);
+}
+#home {
+  padding-top: 100px;
+}
+nav ul li {
+  list-style: none;
+  text-decoration: none;
+}
+nav ul li a {
+  text-decoration: none;
+  font-size: 25px;
+  margin: 10px;
+  color: var(--lighttextcolor);
+  border: 2px solid --darkbackground;
+  border-radius: 8px;
+  padding: 2px 12px 2px 12px;
+  transition: all 0.3s ease-in;
+}
+nav ul li a:hover {
+  background-color: #fff;
+  color: #292929;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+.active {
+  display: block;
+  text-align: center;
+}
+
+nav button {
+  background-color: var(--darkbackground);
+  color: var(--lighttextcolor);
+  font-size: 20px;
+  border-radius: 10px;
+  margin-right: 60px;
+  margin-left: 20px;
+  border: 2px solid white;
+  padding: 2px 12px 2px 12px;
+  transition: all 0.3s ease-in;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
+
+.about p {
+  width: 50vw;
+}
+
+.sec {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.skillcontainer {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 80px;
+}
+.skills {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.card {
+  border: 2px solid rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 10px;
+  width: 400px;
+  margin-bottom: 28px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+.card img {
+  width: 400px;
+  border-radius: 10px;
+}
+
+.toolscontainer h1 {
+  text-align: center;
+}
+.toolscontainer img {
+  width: 70px;
+  padding-top: 28px;
+  padding-left: 40px;
+}
+
+.img img {
+  width: 100px;
+}
+
+.projects {
+  margin-top: 180px;
+  margin-bottom: 150px;
+  padding: 50px 20px 40px 20px;
+  background-color: #29292913;
+}
+.projects h1 {
+  text-align: center;
+}
+.details h2 a {
+  text-decoration: none;
+  color: black;
+}
+.projectcontainer {
+  display: flex;
+  justify-content: center;
+  margin: 40px;
+}
+
+.details {
+  width: 1200px;
+  margin-left: 40px;
+}
+.projectcontainer img {
+  padding: 20px 40px 20px 40px;
+  border-radius: 10px;
+  border: 2px solid rgb(255, 255, 255);
+  background-color: white;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+#contact h1 {
+  /* text-align: center; */
+  padding-bottom: 20px;
+}
+#contact {
+  background-color: #292929;
+  color: rgb(208, 208, 208);
+  padding: 20px 40px 40px 40px;
+}
+
+.contactDetails {
+  display: flex;
+}
+.contactDetails h3 a {
+  text-decoration: none;
+  color: white;
+}
+.contactDetails img {
+  width: 28px;
+  padding-right: 20px;
+  padding-bottom: 16px;
+}
+footer {
+  position: fixed;
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  bottom: 0px;
+  background-color: #292929;
+  color: #ffff;
+}
+
+@media (max-width: 840px) {
+  .sec {
+    flex-direction: column;
+  }
+
+  .profile img {
+    width: 280px;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+  nav h1 {
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  nav h1 .bx-menu {
+    display: block;
+  }
+  nav ul {
+    flex-direction: column;
+    display: none;
+  }
+  nav ul li {
+    padding-top: 20px;
+  }
+  nav ul button {
+    margin: 0;
+  }
+  .card {
+    width: 280px;
+  }
+
+  .card img {
+    width: 280px;
+  }
+
+  .projectcontainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .details {
+    margin-left: 0px;
+    width: 80vw;
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1280px) {
+  .skillcontainer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
