@@ -207,7 +207,9 @@ footer {
   .profile img {
     width: 280px;
   }
-
+  #home .about p {
+    width: 80vw;
+  }
   nav {
     flex-direction: column;
     padding: 0 0 10px 0;
