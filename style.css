@@ -190,13 +190,38 @@ button:hover {
   padding-bottom: 16px;
 }
 footer {
-  position: fixed;
+  padding-top: 50px;
+  padding-bottom: 50px;
   display: flex;
+  /* flex-direction: column; */
   width: 100vw;
-  justify-content: center;
+  align-items: center;
   bottom: 0px;
   background-color: #292929;
   color: #ffff;
+}
+
+footer form {
+  display: flex;
+  width: 280px;
+  flex-direction: column;
+  margin: auto;
+}
+footer form input {
+  margin: 10px 0 10px 0;
+  height: 40px;
+  border-radius: 10px;
+  border: 0;
+}
+
+footer form textarea {
+  margin: 10px 0 10px 0;
+}
+footer form button {
+  width: 150px;
+  height: 40px;
+  padding: 10px 10px 10px 10px;
+  border-radius: 10px;
 }
 
 @media (max-width: 840px) {
@@ -204,12 +229,18 @@ footer {
     flex-direction: column;
   }
 
-  .profile img {
-    width: 280px;
+  footer {
+    display: flex;
+    flex-direction: column;
   }
+
   #home .about p {
     width: 80vw;
   }
+  .profile img {
+    width: 280px;
+  }
+
   nav {
     flex-direction: column;
     padding: 0 0 10px 0;

@@ -93,7 +93,6 @@
             <h4>
               HTML, CSS, JavaScript
               <button
-                target="_blank"
                 onclick="document.location.href='https://vaibhavwebdeveloper.github.io/personal-portfolio/weather.html';"
               >
                 Go to Site
@@ -118,8 +117,7 @@
             <h4>
               HTML, CSS, JavaScript
               <button
-                 target="_blank"
-                onclick="document.location.href='https://vaibhavwebdeveloper.github.io/portfolio/';"
+                onclick="document.location.href='https://vaibhavwebdeveloper.github.io/personal-portfolio/weather.html';"
               >
                 Go to Site
               </button>
@@ -140,7 +138,7 @@
             <h2>Calculator Application</h2>
             <h4>
               HTML, CSS, JavaScript
-              <button                 target="_blank"
+              <button
                 onclick="document.location.href='https://vaibhavwebdeveloper.github.io/personal-portfolio/calcindex.html';"
               >
                 Go to Site
@@ -155,8 +153,9 @@
           </div>
         </div>
       </section>
+    </div>
+    <footer>
       <section id="contact">
-        <h1>Contact Me</h1>
         <div class="contact">
           <div class="contactDetails">
             <img src="telephone.png" alt="" />
@@ -178,9 +177,16 @@
           </div>
         </div>
       </section>
-    </div>
-    <footer>
-      <h5>Copyright @ Vaibhav 2023</h5>
+      <form onsubmit="sendEmail(); reset(); return false">
+        <h2>Contact Me</h2>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" />
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" />
+        <label for="message">Enter your message</label>
+        <textarea name="message" id="message" cols="10" rows="5"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
     </footer>
   </body>
   <script>
@@ -190,5 +196,24 @@
       console.log("clicked");
       ul.classList.toggle("active");
     };
+    function sendEmail() {
+      Email.send({
+        SecureToken: "3e8a7a01-4bc7-4183-812f-62fc2308bcc5",
+        Host: "smtp.elasticemail.com",
+        Username: "shivamsaini668@gmail.com",
+        Password: "F4A3F373655CFF0617011E8EB9D2E6E38307",
+        To: "sainivaibhav668@gmail.com",
+        From: "shivamsaini668@gmail.com",
+        Subject: "Message from my Site",
+        Body:
+          "Name: " +
+          document.getElementById("name").value +
+          "<br>Email: " +
+          document.getElementById("email").value +
+          "<br>Message: " +
+          document.getElementById("message").value,
+      }).then((message) => alert("Message Sent"));
+    }
   </script>
+  <script src=" https://smtpjs.com/v3/smtp.js"></script>
 </html>
